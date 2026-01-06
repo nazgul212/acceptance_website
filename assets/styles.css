@@ -527,7 +527,7 @@ li {
    FORMS - Modern & Friendly
    =================================== */
 .form {
-    max-width: 700px;
+    max-width: 1100px;
     margin: 0 auto;
     background-color: var(--color-bg-primary);
     padding: var(--spacing-2xl);

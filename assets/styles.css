@@ -1,51 +1,66 @@
 /* ===================================
    MANNY KASHTO WEBSITE - STYLES
-   Modern, trust-first mortgage professional site
+   Modern, Premium Mortgage Professional Site
    =================================== */
+
+/* Import Google Fonts - Outfit (Headings) & Inter (Body) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap');
 
 /* ===================================
    CSS CUSTOM PROPERTIES
    =================================== */
 :root {
-    /* Colors - Professional, trust-building palette */
-    --color-primary: #2c5282;
-    --color-primary-light: #4a7ba7;
-    --color-primary-dark: #1a365d;
-    --color-secondary: #4a5568;
-    --color-accent: #3182ce;
+    /* Colors - Premium Blue Palette */
+    --color-primary: #1e3a8a;
+    /* Deep Rich Blue */
+    --color-primary-light: #3b82f6;
+    /* Vibrant Blue */
+    --color-primary-dark: #0f172a;
+    /* Dark Slate/Navy */
+    --color-secondary: #0f172a;
+    /* Secondary Text/UI Elements */
+    --color-accent: #0ea5e9;
+    /* Sky Blue Accent */
 
-    --color-text-primary: #1a202c;
-    --color-text-secondary: #4a5568;
-    --color-text-light: #718096;
+    --color-text-primary: #0f172a;
+    /* Almost Black */
+    --color-text-secondary: #475569;
+    /* Slate Gray */
+    --color-text-light: #94a3b8;
+    /* Lighter Gray */
 
     --color-bg-primary: #ffffff;
-    --color-bg-secondary: #f7fafc;
-    --color-bg-tertiary: #edf2f7;
+    --color-bg-secondary: #f8fafc;
+    /* Very Light Slate */
+    --color-bg-tertiary: #f1f5f9;
 
     --color-border: #e2e8f0;
     --color-border-light: #f1f5f9;
 
-    --color-success: #38a169;
-    --color-error: #e53e3e;
+    --color-success: #10b981;
+    --color-error: #ef4444;
 
-    /* Typography */
-    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    --font-size-base: 16px;
-    --font-size-sm: 0.875rem;
-    --font-size-lg: 1.125rem;
-    --font-size-xl: 1.25rem;
-    --font-size-2xl: 1.5rem;
-    --font-size-3xl: 1.875rem;
-    --font-size-4xl: 2.25rem;
+    /* Typography - Scaled Up for Impact */
+    --font-family-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-family-heading: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+    --font-size-base: 18px;
+    /* Increased from 16px */
+    --font-size-sm: 0.95rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
+    --font-size-3xl: 2.5rem;
+    --font-size-4xl: 3.5rem;
 
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
 
-    --line-height-tight: 1.25;
-    --line-height-normal: 1.5;
-    --line-height-relaxed: 1.75;
+    --line-height-tight: 1.1;
+    --line-height-normal: 1.6;
+    --line-height-relaxed: 1.8;
 
     /* Spacing */
     --spacing-xs: 0.25rem;
@@ -54,26 +69,28 @@
     --spacing-lg: 1.5rem;
     --spacing-xl: 2rem;
     --spacing-2xl: 3rem;
-    --spacing-3xl: 4rem;
-    --spacing-4xl: 6rem;
+    --spacing-3xl: 5rem;
+    --spacing-4xl: 8rem;
 
     /* Layout */
-    --container-max-width: 1200px;
-    --container-padding: 1.5rem;
-    --header-height: 70px;
+    --container-max-width: 1280px;
+    /* Slightly wider */
+    --container-padding: 2rem;
+    --header-height: 80px;
 
     /* Borders & Shadows */
-    --border-radius-sm: 4px;
-    --border-radius-md: 8px;
-    --border-radius-lg: 12px;
+    --border-radius-sm: 6px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
 
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    --shadow-colored: 0 20px 25px -5px rgba(59, 130, 246, 0.15), 0 8px 10px -6px rgba(59, 130, 246, 0.1);
 
     /* Transitions */
-    --transition-fast: 150ms ease-in-out;
-    --transition-normal: 250ms ease-in-out;
+    --transition-fast: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ===================================
@@ -93,7 +110,7 @@ html {
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: var(--font-family-body);
     font-weight: var(--font-weight-normal);
     line-height: var(--line-height-normal);
     color: var(--color-text-primary);
@@ -111,14 +128,19 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: var(--font-family-heading);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
     color: var(--color-text-primary);
     margin-bottom: var(--spacing-md);
+    letter-spacing: -0.025em;
+    /* Tighter tracking for headings */
 }
 
 h1 {
     font-size: var(--font-size-4xl);
+    font-weight: 800;
+    /* Extra bold */
     margin-bottom: var(--spacing-lg);
 }
 
@@ -138,6 +160,8 @@ p {
     margin-bottom: var(--spacing-md);
     color: var(--color-text-secondary);
     line-height: var(--line-height-relaxed);
+    font-size: 1.1rem;
+    /* Slightly larger than base for main text blocks */
 }
 
 a {
@@ -272,10 +296,19 @@ li {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: var(--color-bg-primary);
+    background-color: rgba(255, 255, 255, 0.85);
+    /* Translucent */
+    backdrop-filter: blur(12px);
+    /* Glassmorphism */
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--color-border);
-    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
     height: var(--header-height);
+}
+
+.header.scrolled {
+    box-shadow: var(--shadow-sm);
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 .header__container {
@@ -317,7 +350,7 @@ li {
 }
 
 .nav__link {
-    font-size: 1.15rem;
+    font-size: 1.35rem;
     font-weight: var(--font-weight-medium);
     color: var(--color-text-secondary);
 }
@@ -366,7 +399,11 @@ li {
    =================================== */
 .hero {
     padding: var(--spacing-4xl) 0;
-    background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg-primary) 100%);
+    /* Subtle mesh gradient feel */
+    background:
+        radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(14, 165, 233, 0.05) 0%, transparent 40%),
+        linear-gradient(180deg, var(--color-bg-secondary) 0%, var(--color-bg-primary) 100%);
     border-bottom: 1px solid var(--color-border-light);
 }
 
@@ -407,26 +444,30 @@ li {
 }
 
 .btn--primary {
-    background-color: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-primary) 0%, #2563eb 100%);
+    /* Gradient */
     color: white;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2), 0 2px 4px -1px rgba(37, 99, 235, 0.1);
 }
 
 .btn--primary:hover {
-    background-color: var(--color-primary-dark);
-    color: white;
+    background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3), 0 4px 6px -2px rgba(37, 99, 235, 0.15);
 }
 
 .btn--secondary {
-    background-color: transparent;
+    background-color: white;
     color: var(--color-primary);
-    border: 2px solid var(--color-primary);
+    border: 2px solid var(--color-border);
 }
 
 .btn--secondary:hover {
-    background-color: var(--color-primary);
-    color: white;
+    border-color: var(--color-primary);
+    background-color: var(--color-bg-secondary);
+    color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn--large {
@@ -439,7 +480,7 @@ li {
    =================================== */
 .card {
     background-color: var(--color-bg-primary);
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-border-light);
     border-radius: var(--border-radius-lg);
     padding: var(--spacing-xl);
     box-shadow: var(--shadow-sm);
@@ -447,8 +488,10 @@ li {
 }
 
 .card:hover {
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-colored);
+    /* Colored shadow on hover */
     transform: translateY(-4px);
+    border-color: rgba(59, 130, 246, 0.2);
 }
 
 .card__title {
@@ -522,8 +565,9 @@ li {
 .form__textarea,
 .form__select {
     width: 100%;
-    padding: 0.875rem var(--spacing-md);
-    font-size: 1rem;
+    padding: 1rem var(--spacing-md);
+    /* Larger touch target */
+    font-size: var(--font-size-base);
     font-family: inherit;
     color: var(--color-text-primary);
     background-color: var(--color-bg-tertiary);
@@ -537,6 +581,7 @@ li {
 .form__textarea:hover,
 .form__select:hover {
     background-color: var(--color-bg-secondary);
+    border-color: var(--color-border);
 }
 
 .form__input:focus,
@@ -544,8 +589,9 @@ li {
 .form__select:focus {
     outline: none;
     background-color: var(--color-bg-primary);
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 4px rgba(44, 82, 130, 0.1);
+    border-color: var(--color-primary-light);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+    /* Modern focus ring */
 }
 
 .form__textarea {
@@ -555,13 +601,14 @@ li {
 
 .form__select {
     cursor: pointer;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%234a5568'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23475569'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: right 1rem center;
-    background-size: 1rem;
-    padding-right: 2.5rem;
+    background-position: right 1.25rem center;
+    background-size: 1.25rem;
+    padding-right: 3rem;
     appearance: none;
     -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .form__error {
@@ -626,6 +673,8 @@ li {
     background: var(--color-border);
     border-radius: 4px;
     outline: none;
+    appearance: none;
+    /* Standard property */
     -webkit-appearance: none;
     /* Override default CSS styles */
     cursor: pointer;

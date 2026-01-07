@@ -174,7 +174,43 @@ document.addEventListener('DOMContentLoaded', function () {
             submitButton.disabled = true;
             submitButton.textContent = 'Sending...';
 
-            let body = new FormData(form);
+            // Create a new FormData to hold the normalized data
+            let body = new FormData();
+
+            // Add common fields
+            body.append('Name', form.querySelector('[name="name"]').value);
+            body.append('Email', form.querySelector('[name="email"]').value);
+            body.append('Phone', form.querySelector('[name="phone"]').value || '');
+            body.append('Message', form.querySelector('[name="message"]').value || '');
+
+            const mType = mortgageTypeSelect.value;
+            body.append('Mortgage Type', mType);
+
+            // Add workflow-specific fields
+            if (mType === 'purchase') {
+                body.append('Property Type', document.getElementById('purchase-property-type').value);
+                body.append('Decision Process', document.getElementById('purchase-decision-process').value);
+                body.append('Residency Usage', document.getElementById('purchase-residency-usage').value);
+                body.append('State', document.getElementById('purchase-state').value);
+                body.append('Zip', document.getElementById('purchase-zip').value);
+                body.append('Property Value', document.getElementById('purchase-property-value').value);
+                body.append('Down Payment', document.getElementById('purchase-down-payment').value);
+                body.append('Income', document.getElementById('purchase-income').value);
+                body.append('Credit Score', document.getElementById('purchase-credit-score').value);
+                body.append('Military', document.getElementById('purchase-military').value);
+            } else if (mType === 'refinance') {
+                body.append('Property Type', document.getElementById('refinance-property-type').value);
+                body.append('Decision Process', document.getElementById('refinance-decision-process').value);
+                body.append('Residency Usage', document.getElementById('refinance-residency-usage').value);
+                body.append('State', document.getElementById('refinance-state').value);
+                body.append('Zip', document.getElementById('refinance-zip').value);
+                body.append('Property Value', document.getElementById('refinance-property-value').value);
+                // Refi doesn't have Down Payment, so we can leave it empty or skip
+                body.append('Down Payment', 'N/A');
+                body.append('Income', document.getElementById('refinance-income').value);
+                body.append('Credit Score', document.getElementById('refinance-credit-score').value);
+                body.append('Military', document.getElementById('refinance-military').value);
+            }
 
             // 1. Fire the request in the background (Optimistic Approach)
             fetch(scriptURL, { method: 'POST', body: body })

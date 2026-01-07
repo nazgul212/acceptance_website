@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
     refiCashOutInput.addEventListener('input', updateRefiCalc);
 
     // --- 5. Form Submission (Google Sheets) ---
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwp4e6uChTm01JEvnJj0vJ_76gmv-tGGuLzl-o_8gWa99Yeb-8Q03Zx80dq1MBYkgc/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby5pTXGgedJ7hrs1u2wjUGu8o9i4moQyOwakHWaHmC-3J23djiQoYtOXPgVt8H-l1I/exec';
     const form = document.querySelector('#contact-form');
     const submitButton = form.querySelector('button[type="submit"]');
 

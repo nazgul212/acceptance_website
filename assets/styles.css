@@ -555,8 +555,8 @@ li {
     color: var(--color-primary-dark);
     /* Using theme color for labels */
     margin-bottom: var(--spacing-xs);
-    font-size: 1.125rem;
-    /* Increased size (~30% bigger) */
+    font-size: 1.3rem;
+    /* Increased size (~30% bigger + 15% more) */
     letter-spacing: 0.01em;
     transition: color var(--transition-fast);
 }
@@ -567,7 +567,7 @@ li {
     width: 100%;
     padding: 1rem var(--spacing-md);
     /* Larger touch target */
-    font-size: var(--font-size-base);
+    font-size: 1.15rem;
     font-family: inherit;
     color: var(--color-text-primary);
     background-color: var(--color-bg-tertiary);
